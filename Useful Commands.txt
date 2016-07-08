@@ -53,7 +53,7 @@ LastFrame1=nullif(@LastFrame1,''),FirstFrame2=nullif(@FirstFrame2,''), LastFrame
 Creating Tables
 
 create table sightings (EventCodes char(2), Cruise text, Local_Date date, Local_Time time, Local_DateTime datetime,
-GMT_Diff time, GMT_DateTime datetime, Lat decimal(8,5), Longi decimal(8,5), DecLat decimal(8,5),
+GMT_Diff time, GMT_DateTime datetime, Lat decimal(8,5), `Long` decimal(8,5), DecLat decimal(8,5),
 DecLong decimal(8,5), PortObs char(2), StbdObs char(2), Quality char(1), Visibility int, Precipitation char(2),
 CloudPerc int, GlareBearing_L int, GlareBearing_R int, GlareQuality_SL_M_SE text, WindDir int, WindSpd int, Bft int,
 Swell_FT int, SightingNo int, InitObserver char(2), Cue int, ShipHeadingTru int, SightingBearingTru int,

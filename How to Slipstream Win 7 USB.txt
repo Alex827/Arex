@@ -1,0 +1,38 @@
+How to Slipstream (Add updates) Win 7 USB
+
+	1.  Download "Windows Update Downloader" (aka WUD)
+		i) http://www.windowsupdatesdownloader.com/ProgramFiles.aspx
+		ii) Use ftp: ~/shared/Computer Documentation/Win 7 Slipstream/WUD250B1002Setup.exe
+
+	2.  Download "NTLite" (using 64-bit)
+		i) https://www.ntlite.com/download/
+		ii) use ftp: ~/shared/Computer Documentation/Win 7 Slipstream/NTLite_setup_x64.exe
+
+	3.  Get the Win7 Update list (current updated at 6-22-2016) from ftp onto computer
+		~/shared/Computer Documentation/Win 7 Slipstream/2016-06-22-Win7-Post-SP1 GDR-x64-MULTI.ulz
+
+	4.  Double click the ulz file to install the list
+
+	5.  Run WUD, select from the dropdown at top "Win 7 Post SP1 GDR Updates x64 MULTI", and check:
+		1) Common Convenience Rollup and Classic Integration Updates
+		2) Classic integration Updates
+		3) Classic integration Updates( Professional, Ultimate, and Enterprise Editions ONLY)
+		4) Common Remote Desktop Protocol 8.4 Updates
+		5) Additional Updates
+		6) English Setup Files (IE11 and XP Mode)
+	
+	6.  Click Download and wait for downloads to finish
+
+	7.  Run NTLite and find the Win 7 USB
+	
+	8.  Right Click Win 7 Professional, click Load, and wait for it to load
+
+	9.  On left side panel, click Updates tab
+	
+	10.  On top right corner, click add, and locate the files that WUD downloaded
+		By default: C:\Users\HARP\Documents\Windows Updates Downloader
+
+	11.  On left side panel, click apply tab
+		then, on top right corner, click process
+
+	12.  Wait for the image to get rebuilt, then DONE

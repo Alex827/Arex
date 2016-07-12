@@ -1,5 +1,6 @@
 import sys
 import urllib
+import os
 
 def lineCheck(inputLine, inputStr):
 	leng = len(inputStr)
@@ -122,3 +123,5 @@ outputString = ("\n" + firstName + "\n"
 outputString = exnameCheck(outputString)
 
 print(outputString)
+
+os.remove(file)

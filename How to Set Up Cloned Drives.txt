@@ -1,0 +1,9 @@
+How to Set Up Cloned Drives
+
+	1. Input Windows Key
+	
+	2. Set Up Motherboard drivers
+	
+	3. Speccy the new computer
+	
+	4. check all harddrive stuff

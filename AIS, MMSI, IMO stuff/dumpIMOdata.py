@@ -1,15 +1,24 @@
+#importing packages
 import sys
 import urllib
 import os
 
+#Helper Methods
+#gets the correct text from HTML (strips HTML stuff)
 def lineCheck(inputLine, inputStr):
+	#index pointer
 	leng = len(inputStr)
+	#if field is not empty
 	if inputLine[inputLine.find(inputStr)+leng] is not ' ':
+		#strip html
 		return inputLine[inputLine.find(inputStr):]
+	#else return nothing
 	else:
 		return ''
-		
+
+#checks for all exnames
 def exnameCheck(inputStr):
+	#if there is an exname, then put it into final string
 	if exname1 is not '':
 		inputStr = inputStr + exname1 + "\n"
 	if exname2 is not '':
@@ -30,17 +39,23 @@ def exnameCheck(inputStr):
 		inputStr = inputStr + exname9 + "\n"
 	return inputStr
 
+#IMO input number
 numIMO = sys.argv[1]
+#link to database
 link = "http://www.containership-info.com/vessel_" + numIMO + (".html")
+#makes a new file
 file = numIMO + ".html"
+#downloads the file
 urllib.urlretrieve(link,file)
 
 with open(file) as f:
 	for line in f:
+		#if no such IMO in database
 		if line.find("404") > -1:
 			print("\nIMO number not found in database")
 			os.remove(file)
 			sys.exit()
+		#gets all necessary info
 		if line.find("1st name: ") > -1:
 			firstName = lineCheck(line, "1st name: ")
 		if line.find("/ nationality: ") > -1:
@@ -102,6 +117,7 @@ with open(file) as f:
 		if line.find("exname 9: ") > -1:
 			exname9 = lineCheck(line, "exname 9: ")
 
+#put all info into final string
 outputString = ("\n" + firstName + "\n"
 + "IMO number: " + numIMO + "\n\n"
 + "flag " + flagNat + "\n\n"
@@ -124,8 +140,11 @@ outputString = ("\n" + firstName + "\n"
 + grossTon + "\n"
 + handGear + "\n")
 
+#put in exnames if any
 outputString = exnameCheck(outputString)
 
+#print final string
 print(outputString)
 
+#remove the file
 os.remove(file)

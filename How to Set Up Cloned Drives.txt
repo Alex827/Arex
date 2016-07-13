@@ -2,8 +2,12 @@ How to Set Up Cloned Drives
 
 	1. Input Windows Key
 	
-	2. Set Up Motherboard drivers
+	2. Change PC name
 	
-	3. Speccy the new computer
+	3. Set Up Motherboard drivers
 	
-	4. check all harddrive stuff
+	4. Speccy the new computer
+	
+	5. check all harddrive stuff
+	
+	6. Uninstall magictools

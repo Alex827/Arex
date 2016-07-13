@@ -11,23 +11,23 @@ def lineCheck(inputLine, inputStr):
 		
 def exnameCheck(inputStr):
 	if exname1 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname1 + "\n"
 	if exname2 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname2 + "\n"
 	if exname3 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname3 + "\n"
 	if exname4 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname4 + "\n"
 	if exname5 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname5 + "\n"
 	if exname6 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname6 + "\n"
 	if exname7 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname7 + "\n"
 	if exname8 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname8 + "\n"
 	if exname9 is not '':
-		inputStr = inputStr + exname1
+		inputStr = inputStr + exname9 + "\n"
 	return inputStr
 
 numIMO = sys.argv[1]
@@ -37,6 +37,10 @@ urllib.urlretrieve(link,file)
 
 with open(file) as f:
 	for line in f:
+		if line.find("404") > -1:
+			print("\nIMO number not found in database")
+			os.remove(file)
+			sys.exit()
 		if line.find("1st name: ") > -1:
 			firstName = lineCheck(line, "1st name: ")
 		if line.find("/ nationality: ") > -1:
@@ -118,7 +122,7 @@ outputString = ("\n" + firstName + "\n"
 + reeferCont + "\n"
 + deadweight + "\n"
 + grossTon + "\n"
-+ handGear.strip("\n") + "\n")
++ handGear + "\n")
 
 outputString = exnameCheck(outputString)
 

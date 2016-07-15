@@ -15,12 +15,13 @@ def lineCheck(inputLine, inputStr, title):
 			return inputLine[inputLine.find(inputStr)+leng:].replace("</TITLE>", "")
 		#strip html
 		else:
-			return inputLine[inputLine.find(inputStr):]
+			return inputLine[inputLine.find(inputStr)+leng:]
 	#else return nothing
 	else:
 		return ''
 
 #checks for all exnames
+'''
 def exnameCheck(inputStr):
 	#if there is an exname, then put it into final string
 	if exname1 is not '':
@@ -42,6 +43,7 @@ def exnameCheck(inputStr):
 	if exname9 is not '':
 		inputStr = inputStr + exname9 + "\n"
 	return inputStr
+	'''
 
 #IMO input number
 numIMO = sys.argv[1]
@@ -71,7 +73,7 @@ with open(file) as f:
 		if line.find("owner: ") > -1:
 			owner = lineCheck(line, "owner: ", False)
 		if line.find("operator: ") > -1:
-			operator = lineCheck(line, "operatore: ", False)
+			operator = lineCheck(line, "operator: ", False)
 		if line.find("completion year: ") > -1:
 			completionYear = lineCheck(line, "completion year: ", False)
 		if line.find("shipyard: ") > -1:
@@ -124,11 +126,12 @@ with open(file) as f:
 			exname9 = lineCheck(line, "exname 9: ", False)
 
 #put all info into final string
-outputString = ("\nTitle: " + title + "\n"
+''' Line formatting
+outputString = ("\n" + title + "\n"
 + firstName + "\n"
 + "IMO number: " + numIMO + "\n\n"
 + "flag " + flagNat + "\n\n"
-+ owner.strip("\n")
++ owner + "\n"
 + operator + "\n"
 + completionYear + "\n"
 + shipYard + "\n"
@@ -146,9 +149,42 @@ outputString = ("\nTitle: " + title + "\n"
 + deadweight + "\n"
 + grossTon + "\n"
 + handGear + "\n")
+'''
+#comma seperated values format
+outputString = (title.rstrip() + ","
++ firstName.rstrip() + ","
++ numIMO.rstrip() + ","
++ flagNat.rstrip() + ","
++ owner.rstrip() + ","
++ operator.rstrip() + ","
++ completionYear.rstrip() + ","
++ shipYard.rstrip() + ","
++ yard.rstrip() + ","
++ engineDes.rstrip() + ","
++ engineType.rstrip() + ","
++ power.rstrip() + ","
++ maxSpd.replace(",","").rstrip() + ","
++ overallLen.replace(",","").rstrip() + ","
++ overallBeam.replace(",","").rstrip() + ","
++ maxDraught.replace(",","").rstrip() + ","
++ maxTEU.rstrip() + ","
++ contCapacity.rstrip() + ","
++ reeferCont.rstrip() + ","
++ deadweight.rstrip() + ","
++ grossTon.rstrip() + ","
++ handGear.rstrip() + ","
++ exname1.rstrip() + ","
++ exname2.rstrip() + ","
++ exname3.rstrip() + ","
++ exname4.rstrip() + ","
++ exname5.rstrip() + ","
++ exname6.rstrip() + ","
++ exname7.rstrip() + ","
++ exname8.rstrip() + ","
++ exname9.rstrip())
 
 #put in exnames if any
-outputString = exnameCheck(outputString)
+#outputString = exnameCheck(outputString)
 
 #print final string
 print(outputString)

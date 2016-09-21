@@ -1,0 +1,17 @@
+How to Set Up New Backuppc Disk
+
+	1. Partition and format disk
+	
+	2. mount to /mnt/backuppc
+	
+	3. add entry to fstab for this
+	
+	4. mkdir /mnt/backuppc/pc and /mnt/backuppc/cpool
+	
+	5. copy config files to /mnt/backuppc/pc ( backups of these are .pl files )
+	
+	6. change ownership of backuppc mount and subdirectories to backuppc:backuppc
+	
+	7. restart backuppc ( service restart backuppc )
+	
+	8. verify backuppc webpage starts and test with a backup

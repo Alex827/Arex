@@ -1,0 +1,16 @@
+Harddrives That Don't Mount on Addonics SATA Controllers
+
+Using Addonics Red SATA controllers Model #: ADSA4R5
+
+Hard Drive Model #: Seagate ST6000DM001
+
+Issue: Seems like big hard drives like 6TB have issues being seen
+	on computers that use the Addonics red SATA controllers. The controllers
+	sees the hard drive in its BIOS menu but it would recognize it as an
+	"Invalid Raid Device."
+	
+Fix: You have to go to the BIOS menu for the Addonics controller and delete the	
+	RAID set. It shouldn't clear any data on the hard drive, but a back up would
+	be best. It should then change the drive status from "Invalid Raid Device" to	
+	"Reserved Drive"
+	

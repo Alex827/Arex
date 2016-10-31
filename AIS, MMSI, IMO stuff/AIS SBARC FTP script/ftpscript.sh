@@ -11,7 +11,7 @@ ARROFNAMES=()
 #connects to ftp to get LS of files on server
 printf "Connecting to FTP\n"
 
-ftp -A -i -n aisdata.sbarc.org << SCRIPT1 
+ftp -A -i -n aisdata.sbarc.org > /dev/null << SCRIPT1 
 quote USER $USER
 quote PASS $PASSWD
 lcd /home/aisadmin/AISdata_logfiles/SBARC

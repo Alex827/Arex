@@ -27,17 +27,23 @@ with open(filesOnServer) as serverF:
 	arrOfSerF = serverF.readlines()
 	#if client has less files than server
 	if len(arrOfCliF) < len(arrOfSerF):
-		#keeps track of max number of files in client list as an index
-		maxInd = 0;
-		#if files are different, then add to difference array
-		for i in range(0, len(arrOfCliF)):
-			#print(arrOfCliF[i])
-			if arrOfCliF[i] != arrOfSerF[i]:
-				diffArrToRet.append(arrOfSerF[i])
-			maxInd = i
-		#add remaining files from server list to difference array
-		for j in range(maxInd, len(arrOfSerF)):
-			diffArrToRet.append(arrOfSerF[j])
+		#if server has files not in client, then add to diff array
+		for i in range(0, len(arrOfSerF)):
+			if arrOfSerF[i] not in arrOfCliF:
+				diffArrToRet.append(arrOfSerF[i]);
+
+#		toCont = 0
+#		#if files are different, then add to difference array
+#		for i in range(0, len(arrOfSerF)):
+#			if toCont == 1:
+#				toCont = 0
+#				continue;
+#			for j in range(0, len(arrOfCliF)):
+#				if arrOfCliF[j].find("filesList") > 0:
+#					continue;
+#				if arrOfSerF[i] != arrOfCliF[j]:
+#					diffArrToRet.append(arrOfSerF[i])
+#					toCont = 1
 
 #prints the files to stdout for bash to take in as variable
 for i in range(0, len(diffArrToRet)):

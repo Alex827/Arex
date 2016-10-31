@@ -14,7 +14,7 @@ import os
 toStrip = '/home/aisadmin/AISdata_logfiles/SBARC/filesList.txt'
 
 #the new file to add the stripped names to
-newFile = open('/home/aisadmin/scripts/AISFTP/strippedLS.txt', 'w+')
+newFile = open('/home/aisadmin/scripts/AISFTP/strippedLS.txt', 'w')
 
 #loop through all the lines to get only the names
 with open(toStrip) as file:

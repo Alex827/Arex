@@ -30,15 +30,17 @@ python splitLSfiles.py
 
 #python script to find missing files in client side
 printf "Differencing server and client file names\n"
+
 #saves all the missing filenames as an array
 ARROFNAMES=($(python diffLSfiles.py))
 
 #loop through each file and download them through ftp
-printf "Downloading missing files\n"
-
-for i in "${ARROFNAMES[@]}"
-do
-printf "Now downloading $i\n"	
+#if there are files to download
+if [ ${#ARROFNAMES[@]} -gt 0 ]; then
+	printf "Downloading missing files\n"
+	for i in "${ARROFNAMES[@]}"
+		do
+		printf "Now downloading $i\n"	
 ftp -A -i -n aisdata.sbarc.org > /dev/null << SCRIPT2 
 	quote USER $USER
 	quote PASS $PASSWD
@@ -46,6 +48,12 @@ ftp -A -i -n aisdata.sbarc.org > /dev/null << SCRIPT2
 	get $i
 	exit 
 SCRIPT2
-done
+	done
+#print this message if there are no files
+else
+	printf "There are no missing files\n"
+fi
+#print done when done
+printf "Done\n"
 
 exit 0

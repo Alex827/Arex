@@ -1,0 +1,68 @@
+How To Reset Windows Passwird with Hiren's Boot CD
+
+  1. Enter “Offline NT/2000/XP/Vista/7 Password Changer”
+  
+  2. Wait for “Offline NT Password & Registry Editor” to Load
+  
+  3. Choose the Correct Hard Drive Partition
+		Find your Windows C: drive partition
+
+  4. Confirm the Windows Registry Path
+		Just press enter as it should be at default path already
+
+  5. Choose the Password Reset Option
+  
+  6. Choose the Edit User Data and Passwords Option
+  
+  7. Enter the Username to Edit
+  
+  8. Type 1 to Clear (blank) user password and then press ENTER
+  
+  9. Type ! to quit the User Edit Tool
+  
+ 10. Type q to Quit Offline NT Password & Registry Editor
+ 
+ 11. Type y and then press ENTER to confirm Password Reset Changes
+ 
+ 12. Confirm That You’re Finished Using Offline NT Password & Registry Editor
+ 
+ 13. Reboot the computer
+ 
+ *** THIS METHOD MAY MESS UP THE WINDOWS C: PARTITION ***
+ *** YOU MAY NEED TO CHANGE THE DRIVE LETTERS FROM OUTSIDE OF WINDOWS ***
+ 
+   1. Make sure the physical HDD is plugged into a normal SATA port (could also work with the Marvell ports in IDE mode; need to test this next if this problem occurs)
+   
+   2. Boot off of a Windows Installation USB
+   
+   3. Go to "Repair your computer" option
+   
+   4. It will try to find an existing Windows installation on the HDD
+   
+   5. Make note of the drive letter that the Windows partition is currently on
+   
+   6. You can cancel the startup repair operation as it will usually not help us
+   
+   7. Go to command prompt
+   
+   8. Use diskpart to change the drive letters (assuming you know how to use diskpart)
+		*** steps below are for using diskpart ***
+   9. Enter in "list vol"
+   
+  10. Locate which volume is taking up the "C:" drive letter and which letter your windows partition is
+  
+  11. Enter in "select vol [num]" replacing "num" with the volume number that is using the "C:" drive letter
+  
+  12. Enter "assign letter=[unused letter]"
+  
+  13. Enter "list vol" to ensure that the drive letter changed for that volume
+  
+  14. Enter "select vol [num2]" replacing "num2" with the volume number that is the windows partition drive letter
+  
+  15. Enter "assign letter=C" to change the windows partition to the "C:" drive letter
+  
+  16. Enter "list vol" to ensure the windows partition is the "C:"
+  
+  17. Enter "exit" to exit diskpart
+  
+  18. Reboot the computer

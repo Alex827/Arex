@@ -1,0 +1,15 @@
+set TARGETDIR=/home/aisadmin/AISdata_logfiles/SYP
+REM The source directory (note that you  should use POSIX paths)
+set  SOURCE=c/Documents and Settings/ais/My Documents/AIS-logs/
+
+REM *** Don’t adjust these *** 
+SET CWRSYNCHHOME=%~dp0
+SET CYGWIN=nontsec
+SET HOME=%HOMEDRIVE%%HOMEPATH%
+SET CWOLDPATH=%PATH%
+SET PATH=%CWRSYNCHOME%\BIN;%PATH%
+
+rsync –ae “ssh –i keys\id_rsa” “/cygdrive/%SOURCE%” %USER%@%HOST%:%TARGETDIR% 
+
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwD8rzjTklOQMG781g1JxYi7mZW0ylKmrc//jqiWTyUt7alrwVkngjqcwwAy+cTpqCUF8gykhBeyT/dnUDUPFzjLO5JI2P9/VzaXyc1vGEHHbzO7NwS3zB4fHKNfEom73IVtJvehvqNtHdjGYkxzVMJGwTTXbjQ8NqB+aS8ZS8TzyFhs6nlaK0+MWAeV6TNqnLkTTIHfI66ee72RV9tNnhHZSKSpckoAgBmaYCTLn33aLPem8/VoOO1vewnWFlQ7zDydjmYbKQDUDE3v+f3dqIx5iYe6twK29Gwu4EI8oSqFyMvEpsPTqFitWnQTxOnkgNGd5CjR4NvFQQkcCG1jnkQ== aisadmin@cetus.ucsd.edu
+

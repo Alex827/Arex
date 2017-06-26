@@ -1,0 +1,77 @@
+How to View MYSQL Database Locally
+
+  1. Assuming Cygwin is installed with the MYSQL modules and HeidiSQL
+		If these programs are not installed, look at bottom portion on how to install
+  
+  2. Open Cygwin and run 'mysqld_safe' which opens up the MYSQL database
+  
+  3. Open up HeidiSQL
+  
+  4. Everything should be the default settings, but if not then:
+		Hostname/IP should be '127.0.0.1'
+		User should be 'root'
+		Port should be '3306'
+
+  5. Click 'Open' and click on the 'File' on the top
+  
+  6. Click 'Load SQL file...' and select the 'CalCofi_Database.sql' file
+  
+  7. Click 'Yes'
+  
+  8. Select 'CalCofi' database on the left column window
+  
+  6. Select the table that you want ( sorted by conditions, efforts, and sightings )
+  
+  7. On the right hand area of the window, click the 'Data' tab to see data
+  
+---------------------------------------------------------------------------------------
+
+How to Install Cygwin
+
+  1. Download the installer file from the Cygwin website
+  
+  2. Run the installer 
+  
+  3. Click 'Next' on the first screen
+  
+  4. Select 'Install from Internet' and click 'Next'
+  
+  5. Click 'Next' on the screen about root install directory
+  
+  6. Click 'Next' on the screen about the local package directory
+  
+  7. Select 'Direct Connection' and click 'Next'
+  
+  8. Select any of the mirrors and click 'Next'
+  
+  9. On the 'View' scroll down menu, select 'Catergory'
+  
+ 10. In the borrom portion, change 'All * Default' to 'All * Install'
+ 
+ 11. Click 'Next' to install all the packages
+ 
+ 12. Click 'Next' on the resolving dependencies and wait everything to download/install
+ 
+ 13. Click 'Finish'
+ 
+ ---------------------------------------------------------------------------------------
+ 
+ How to Install HeidiSQL
+ 
+   1. Download installer from HeidiSQL website
+   
+   2. Run the installer
+   
+   3. Click 'Next' on first screen
+   
+   4. Click 'Next' on license agreement screen
+   
+   5. Click 'Next' on where to install screen
+   
+   6. Click 'Next' on Start Menu folder screen
+   
+   7. Click 'Next' on Additional tasks screen
+   
+   8. Click 'Install' and wait for installation to finish
+   
+   9. Uncheck 'Launch HeidiSQL' and click 'Finish'

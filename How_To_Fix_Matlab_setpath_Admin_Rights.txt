@@ -1,0 +1,11 @@
+How to Fix Matlab "setpath" Needing Admin Rights
+
+Go to [matlab root]/toolbox/local
+	usually it is C:/Program Files/MATLAB/2013b/toolbox/local
+	for version 2013b
+
+1) right click the local folder and go to properties
+
+2) go to the security tab and click edit
+
+3) grant full control to the standard account

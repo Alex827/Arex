@@ -1,0 +1,19 @@
+Windows 7 log file compression bug can fill up your hard drive
+
+Step 1. Stop the Windows Modules Installer service. Click Start and in the Search box type
+
+services.msc
+
+Press Enter and you see the Local Services list.
+
+Step 2. Scroll down to the Windows Modules Installer service and double-click on it.
+
+Step 3. Under Service status, click Stop. Click OK.
+
+Step 4. Use File Explorer to go to C:\Windows\Logs\CBS. (If Windows is installed on a different hard drive, you have to go to that drive.)
+
+Step 5. Move or rename all of the files in that folder.
+
+Step 6. For good measure, delete all the "cab*" files in your Windows Temp folder, typically C:\Windows\Temp. Makecab won't ever delete them, so you get to.
+
+Step 7. Reboot.

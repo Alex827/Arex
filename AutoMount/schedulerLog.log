@@ -1,0 +1,44 @@
+Unregister-Event : Event subscription with identifier 'volumeChange' does not exist.
+At D:\AutoMount\toRunAutoMount.ps1:4 char:1
++ Unregister-Event -SourceIdentifier volumeChange
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Unregister-Event], ArgumentException
+    + FullyQualifiedErrorId : INVALID_SOURCE_IDENTIFIER,Microsoft.PowerShell.Commands.UnregisterEventCommand
+ 
+
+
+2017-08-01T15:16:46      Beginning script...
+
+
+2017-08-01T15:18:28      Event detected =  Device removal
+
+
+Running script in 3 seconds...
+processed file: \\?\Volume{d968200a-3853-4b0b-9885-243f5caaa36a}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{d968200a-3853-4b0b-9885-243f5caaa36a}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{876298f9-c53e-4135-9938-e6c75eaed130}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{876298f9-c53e-4135-9938-e6c75eaed130}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{b29bde9a-b749-4e46-b0ab-7dcc0cd48877}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{b29bde9a-b749-4e46-b0ab-7dcc0cd48877}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{593420f4-cf70-4718-bd58-2057e08cd13b}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{593420f4-cf70-4718-bd58-2057e08cd13b}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{6124a61e-401b-4f3a-852a-60b3c534287c}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{6124a61e-401b-4f3a-852a-60b3c534287c}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{ee8648fc-0000-0000-0000-100000000000}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{ee8648fc-0000-0000-0000-100000000000}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{3833c6d2-51de-47c8-aebd-62c6712a8c87}\
+Successfully processed 1 files; Failed processing 0 files
+processed file: \\?\Volume{3833c6d2-51de-47c8-aebd-62c6712a8c87}\
+Successfully processed 1 files; Failed processing 0 files

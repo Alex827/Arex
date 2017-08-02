@@ -1,0 +1,27 @@
+POLICY !!NoDrives 
+   EXPLAIN !!NoDrives_Help
+      PART !!NoDrivesDropdown          DROPDOWNLIST NOSORT REQUIRED
+         VALUENAME "NoDrives"
+          ITEMLIST
+                NAME !!ABOnly           VALUE NUMERIC 3
+                NAME !!COnly            VALUE NUMERIC 4
+                NAME !!DOnly            VALUE NUMERIC 8
+                NAME !!ABConly          VALUE NUMERIC 7
+                NAME !!ABCDOnly         VALUE NUMERIC 15
+                NAME !!ALLDrives        VALUE NUMERIC 67108863                                                  
+                ;low 26 bits on (1 bit per drive)
+                NAME !!RestNoDrives     VALUE NUMERIC 0 (Default)
+                            NAME !!E_Only        VALUE NUMERIC 67108847
+          END ITEMLIST
+     END PART               
+   END POLICY
+
+[strings]
+ABCDOnly="Restrict A, B, C and D drives only"
+ABConly="Restrict A, B and C drives only"
+ABOnly="Restrict A and B drives only"
+ALLDrives="Restrict all drives"
+COnly="Restrict C drive only"
+DOnly="Restrict D drive only"
+RestNoDrives="Do not restrict drives"
+E_Only="Allow E drive only"

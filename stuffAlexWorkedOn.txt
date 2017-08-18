@@ -1,0 +1,37 @@
+Things Alex Worked On and Notes for Bruce
+
+- AIS website scraper for Martin and upload to cetus FTP server
+
+- Windows automount hdd to a mountpoint
+
+- calcofi convert csv files into a sql database
+
+- build computers
+
+- setup computers with specified checklist
+
+- troubleshoot hardware
+
+- write documentation
+
+- rsyncd not syncing over 100MB script
+
+- fix backuppc/rsync on not working computers
+
+- slipstream win7 ISO
+
+- configure routers
+
+- test and try to recover dead hdd
+
+- debug bluescreen errors
+
+
+NOTES FOR BRUCE
+
+- added in a 'System Analysis Programs' task in new windows setup 
+	- has useful software that should be added into 'My Documents' of every computer for easy access ( instead of downloading it everytime )
+	
+- IP Address table
+	- made the top 2 rows and first 2 columns stay when scrolling ( pretty convenient instead of having to scroll to see )
+	- color coded stuff
